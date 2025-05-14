@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
     "build": "bun build --minify-whitespace --minify-syntax --target bun --outfile ./dist/index.js ./src/index.ts",
-    "start": "bun run --watch dist/index.js"
+    "start": "bun run build && bun run --watch dist/index.js"
   },
   "dependencies": {
     "axios": "^1.9.0",
