@@ -7,7 +7,7 @@ const app = new Elysia()
     if (accessToken) {
       try {
         const { data } = await axios.get(
-          "https://open.tiktokapis.com/v2/user/info?fields=open_id,union_id,avatar_url,display_name,follower_count,following_count,display_name,profile_deep_link,username,likes_count,video_count",
+          "https://open.tiktokapis.com/v2/user/info/?fields=open_id,union_id,avatar_url,display_name,follower_count,following_count,display_name,profile_deep_link,username,likes_count,video_count",
           { headers: { Authorization: `Bearer ${accessToken}` } }
         );
         console.log(JSON.stringify(data, null, 2));
